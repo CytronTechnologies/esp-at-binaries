@@ -21,3 +21,9 @@ For more info, please refer to:
 Since v2.0.0, Espressif has changed the UART port for AT Command to pin GPIO15 and GPIO13. However, most of the hardware for ESP8266 available in the market is still using GPIO1 and GPIO3 as its UART port. This makes extra wiring is needed in order to use the ESP-AT firmware.
 
 Thus, we have configured the ESP-AT firmware and compiled it on our own so that we can use back pin GPIO1 and GPIO3 as its UART port. The rest of the features are exactly the same with Espressif's firmware.
+
+| Function of Connection | Espressif Firmware                                             | Cytron Firmware                                              |
+| ---------------------- | -------------------------------------------------------------- | ------------------------------------------------------------ |
+| Update Firmware        | **UART0**<br><ul><li>GPIO3 (RX)</li><li>GPIO1 (TX)</li></ul>   | **UART0**<br><ul><li>GPIO3 (RX)</li><li>GPIO1 (TX)</li></ul> |
+| AT Command/Response    | **UART0**<br><ul><li>GPIO13 (RX)</li><li>GPIO15 (TX)</li></ul> | **UART0**<br><ul><li>GPIO3 (RX)</li><li>GPIO1 (TX)</li></ul> |
+| Log Output             | **UART1**<br><ul><li>GPIO2 (TX)</li></ul>                      | **UART1**<br><ul><li>GPIO2 (TX)</li></ul>                    |
