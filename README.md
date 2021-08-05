@@ -3,7 +3,7 @@ These are the AT command firmwares for ESP8266 compiled from [Espressif ESP-AT S
 The firmwares have two different sizes:
   - **Cytron_ESP-01S_AT_Firmware** - For ESP8266 with 1MB flash size (eg: ESP-01), doesn't support OTA update.<br>This firmware is preloaded in:
     - [Cytron ESP-01S](https://www.cytron.io/p-wif-trx-esp8266)
-  - **Cytron_ESP-12F_WROOM-02_AT_Firmware** - For ESP8266 with 2MB and above flash size (eg: ESP-12F, WROOM-02).<br>This firmware is preloaded in:
+  - **Cytron_ESP-12F_WROOM-02_AT_Firmware** - For ESP8266 with flash size 2MB or above (eg: ESP-12F, WROOM-02).<br>This firmware is preloaded in:
     - [Cytron ESP8266 WiFi Shield](https://www.cytron.io/p-shield-esp-wifi)
     - [Cytron ESP8266 WiFi Grove Module](https://www.cytron.io/p-grv-wifi-8266)
 
@@ -17,7 +17,7 @@ For more info, please refer to:
 - [ESP-AT User Guide](https://docs.espressif.com/projects/esp-at/en/release-v2.2.0.0_esp8266/index.html)
 - [AT Command Set Comparison between NONOS-AT and ESP-AT](https://docs.espressif.com/projects/esp-at/en/release-v2.2.0.0_esp8266/AT_Command_Set/AT_Command_Set_Comparison.html)
 
-## What is the different between Cytron's Firmware and Espressif's Firmware?
+## Cytron's Firmware vs Espressif's Firmware?
 Since v2.0.0, Espressif has changed the UART port for AT Command to pin GPIO15 and GPIO13. However, most of the hardware for ESP8266 available in the market is still using GPIO1 and GPIO3 as its UART port. This makes extra wiring is needed in order to use the ESP-AT firmware.
 
 Thus, we have configured the ESP-AT firmware and compiled it on our own so that we can use back pin GPIO1 and GPIO3 as its UART port. The rest of the features are exactly the same with Espressif's firmware.
